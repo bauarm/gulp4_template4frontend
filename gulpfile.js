@@ -10,3 +10,7 @@ exports.default = gulp.series(
 
 );
 
+gulp.task('sass',styles);
+gulp.task('pug',pug2html);
+gulp.task('webpack',wbpack);
+
