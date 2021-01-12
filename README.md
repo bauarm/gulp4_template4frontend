@@ -20,12 +20,22 @@ npm gulp -v
 ```bash
 npm i gulp 
 ```
+## Привязать проект к рабочему репозиторию
+```bash
+git remote set-url origin git@git_server.com:user_name/repository_name.git
+``` 
 ____
 
 ## Инициализация проекта
 ```bash
 npm init -y 
 ``` 
+____
+
+## Запустить сервер разработки
+```bash
+gulp
+```
 ____
 
 ## Работа с отдельными тасками
