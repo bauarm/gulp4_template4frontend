@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp-start": "gulp css-libs && gulp js-libs && gulp"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,12 @@
     "gulp-concat": "^2.6.1",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
     "webpack-stream": "^6.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta2",
+    "jquery": "^3.6.0",
+    "normalize.css": "^8.0.1"
   }
 }
