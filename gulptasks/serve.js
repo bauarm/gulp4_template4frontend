@@ -6,12 +6,11 @@ const script = require('./webpack.js');
 
 const server = require('browser-sync').create();
 
-// Запуск сервера а также слежка за файлами
-
 module.exports = function serve(cb) {
   server.init({
     server: 'dist',
     notify: false,
+    browser: "google chrome",
     open: true,
     cors: true
   });

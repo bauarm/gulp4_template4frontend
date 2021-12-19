@@ -1,21 +1,26 @@
 const gulp = require('gulp');
-const pug2html = require('./gulptasks/pug');
+const clean = require('./gulptasks/clean');
+const pug = require('./gulptasks/pug');
 const styles = require('./gulptasks/styles');
 const wbpack = require('./gulptasks/webpack');
 const serve = require('./gulptasks/serve');
 const cssLibs = require('./gulptasks/csslibs');
 const jsLibs = require('./gulptasks/jslibs');
 
-const dev = gulp.parallel(pug2html, styles, wbpack);
+global.isDev=true;
+global.isProd=!isDev;
+
+const dev = gulp.parallel(pug, styles, wbpack);
 
 exports.default = gulp.series(
-  dev,serve
+  clean,dev,serve
 
 );
 
 gulp.task('js-libs',jsLibs);
 gulp.task('css-libs',cssLibs);
 gulp.task('sass',styles);
-gulp.task('pug',pug2html);
+gulp.task('pug',pug);
 gulp.task('webpack',wbpack);
+gulp.task('clean',clean);
 
