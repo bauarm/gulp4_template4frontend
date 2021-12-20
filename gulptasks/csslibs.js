@@ -10,6 +10,6 @@ module.exports = function cssLibs(){
   ])
     .pipe(concat('libs.min.css'))
     .pipe(cleanCSS({level:{1:{specialComments:0}}}))
-    .pipe(gulp.dest('./dist/static/css'))
+    .pipe(gulp.dest('./dist/styles/libs'))
 };
 

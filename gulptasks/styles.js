@@ -15,5 +15,5 @@ module.exports = function styles() {
     }))
     .pipe(concat('app.min.css'))
     .pipe(cleanCSS({level:{1:{specialComments:0}},/*format:'beautify'*/}))
-    .pipe(gulp.dest('./dist/static/css'))
+    .pipe(gulp.dest('./dist/styles/'))
 };

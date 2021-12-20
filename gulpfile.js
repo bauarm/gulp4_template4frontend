@@ -4,13 +4,15 @@ const pug = require('./gulptasks/pug');
 const styles = require('./gulptasks/styles');
 const wbpack = require('./gulptasks/webpack');
 const serve = require('./gulptasks/serve');
+const fonts = require('./gulptasks/fonts.js');
+const images = require('./gulptasks/images.js');
 const cssLibs = require('./gulptasks/csslibs');
 const jsLibs = require('./gulptasks/jslibs');
 
 global.isDev=true;
 global.isProd=!isDev;
 
-const dev = gulp.parallel(pug, styles, wbpack);
+const dev = gulp.parallel(fonts,images, pug, styles, wbpack);
 
 exports.default = gulp.series(
   clean,dev,serve
